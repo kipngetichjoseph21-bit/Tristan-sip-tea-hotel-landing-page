@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tristan Sip Tea Hotel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: radial-gradient(circle at top, #1b0f0a, #000);
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+}
+
+.card{
+    width:360px;
+    background: linear-gradient(180deg, #3b2314, #1a0e08);
+    border-radius:22px;
+    box-shadow: 0 0 40px rgba(255,170,80,0.4);
+    overflow:hidden;
+    position:relative;
+}
+
+.top{
+    padding:30px 20px;
+    text-align:center;
+}
+
+.top h1{
+    font-size:28px;
+    letter-spacing:1px;
+    color:#ffcc8a;
+}
+
+.top p{
+    font-size:14px;
+    opacity:0.85;
+    margin-top:8px;
+}
+
+.cup{
+    font-size:80px;
+    text-align:center;
+    margin:10px 0;
+    filter: drop-shadow(0 0 15px #ffb347);
+}
+
+/* Steam animation */
+.steam{
+    position:absolute;
+    left:50%;
+    top:115px;
+    transform:translateX(-50%);
+}
+
+.steam span{
+    position:absolute;
+    bottom:0;
+    width:10px;
+    height:60px;
+    background: linear-gradient(to top, rgba(255,255,255,0.4), transparent);
+    border-radius:50%;
+    animation: rise 3s infinite;
+    opacity:0;
+}
+
+.steam span:nth-child(1){ left:-20px; animation-delay:0s;}
+.steam span:nth-child(2){ left:0; animation-delay:1s;}
+.steam span:nth-child(3){ left:20px; animation-delay:2s;}
+
+@keyframes rise{
+    0%{ transform:translateY(0); opacity:0;}
+    50%{ opacity:0.7;}
+    100%{ transform:translateY(-60px); opacity:0;}
+}
+
+.content{
+    padding:20px;
+    text-align:center;
+}
+
+.content h2{
+    color:#ffd9a0;
+    margin-bottom:10px;
+}
+
+.content p{
+    font-size:15px;
+    line-height:1.6;
+    opacity:0.9;
+}
+
+.menu{
+    margin:18px 0;
+}
+
+.menu div{
+    background: rgba(255,255,255,0.05);
+    padding:8px;
+    margin:6px 0;
+    border-radius:12px;
+    font-size:14px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:12px;
+    padding:12px 26px;
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
+    color:#2b1608;
+    font-weight:bold;
+    border-radius:30px;
+    text-decoration:none;
+    box-shadow: 0 0 15px rgba(255,200,100,0.8);
+    transition: transform 0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.footer{
+    background:#120805;
+    text-align:center;
+    padding:10px;
+    font-size:12px;
+    color:#bda07e;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="top">
+        <h1>Tristan Sip ☕</h1>
+        <p>Where every cup tells a story</p>
+    </div>
+
+    <div class="cup">☕</div>
+
+    <div class="steam">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="content">
+        <h2>Warm. Fresh. Comforting.</h2>
+        <p>
+            Step into Tristan Sip Tea Hotel — a place where time slows,
+            worries fade, and tea brings people together.
+        </p>
+
+        <div class="menu">
+            <div>☕ African Milk Tea</div>
+            <div>🌿 Herbal Green Tea</div>
+            <div>🔥 Masala Spiced Tea</div>
+            <div>🍯 Honey Lemon Tea</div>
+        </div>
+
+        <a href="#" class="btn">Sip the Moment</a>
+    </div>
+
+    <div class="footer">
+        © 2026 Tristan Sip Tea Hotel • Made with Love
+    </div>
+</div>
+
+</body>
+</html>
